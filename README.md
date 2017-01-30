@@ -9,15 +9,17 @@ Two people can play [Go](https://en.wikipedia.org/wiki/Go_%28game%29) on the sam
 
 ## Specifications
 ### Required
-- [ ] Players can play on 9x9 board
+- [ ] Two players can play on 9x9 board in the same window.
 - [ ] The board can scale to the window size
 - [ ] Front end will be built using react.
 - [ ] The artifact produced is properly licensed, preferably with the [MIT license](https://opensource.org/licenses/MIT).
+
 ### Stretch Goals
 - [ ] Players can decide between 9x9, 13x13 or 17x17 board size
-- [ ] Two player games work on
+- [ ] Players can decide between different UI themes
 - [ ] The game state is persisted (so reloading the page resumes where you left off)
 - [ ] Define complete set of user stories by reverse engineering [Go](https://en.wikipedia.org/wiki/Go_%28game%29)
+
 ### Quality
 - [ ] There is a clear separation of game logic code from view/rendering code.
 - [ ] A player can only place a peice on their turn, and on a valid grid space
