@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import gameLogic from './Logic.js';
 
-class Gamepeice {
+class Gamepiece {
   constructor(x,y) {
     this.x = x
     this.y = y
@@ -20,7 +20,7 @@ class GameBoard {
     for(let x = 0; x < this.size; x++){
       this.board[x] = []
       for (let y = 0; y < this.size; y++){
-        this.board[x][y] = new Gamepeice(x,y)
+        this.board[x][y] = new Gamepiece(x,y)
       }
     }
     return this.board

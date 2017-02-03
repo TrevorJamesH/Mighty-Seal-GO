@@ -78,11 +78,11 @@ function isLegal(state, cell){
   return true
 }
 
-function isOppositeColor(peice,adjacentPeice){
-  if(peice === 'black'){
+function isOppositeColor(piece,adjacentPeice){
+  if(piece === 'black'){
     return adjacentPeice = 'white' ? true : false
   }
-  if(peice === 'white'){
+  if(piece === 'white'){
     return adjacentPeice = 'black' ? true : false
   }
 }
