@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css';
+import gameLogic from './Logic.js';
 
-
+class Gamepeice {
+  constructor(x,y) {
+    this.x = x
+    this.y = y
+    this.value = 'blank'
+  }
+}
 
 class GameBoard {
   constructor( size ){
@@ -22,35 +27,18 @@ class GameBoard {
   }
 }
 
-class Gamepeice {
-  constructor(x,y) {
-    this.x = x
-    this.y = y
-    this.value = 'blank'
-  }
-}
-
 class Board extends Component {
   constructor() {
     super();
     this.state = {
-      wIsNext: true,
+      whiteIsNext: false,
       gameBoard: new GameBoard(19),
     };
   }
 
-  handleClick(event,cell) {
-    console.log(cell)
-    let newState = this.state
-    let value = newState.gameBoard.board[cell.x][cell.y].value
-    if( value === 'blank' || value === 'white'){
-      newState.gameBoard.board[cell.x][cell.y].value = 'black'
-      this.setState(newState)
-    }
-    if( value === 'blank' || value === 'black'){
-      newState.gameBoard.board[cell.x][cell.y].value = 'white'
-      this.setState(newState)
-    }
+  handleClick(cell){
+    this.setState(gameLogic(this.state, cell))
+
   }
 
   render() {
@@ -58,7 +46,7 @@ class Board extends Component {
       let cells = [];
       for (let i in row) {
         cells.push(<td key={`${row[i].x}-${row[i].y}`}>
-                    <button x = {row[i].x} y = {row[i].y} className={row[i].value} onClick={(event) => this.handleClick(event,row[i])}></button>
+                    <button x={row[i].x} y={row[i].y} className={row[i].value} onClick={(event) => this.handleClick(row[i])}>{row[i].x},{row[i].y}</button>
                   </td>);
       }
       return <tr key={index}>{cells}</tr>;

@@ -2,6 +2,7 @@
 
 .board {
   background: #D2B48C;
+
 }
 
 .blank {
@@ -39,6 +40,7 @@ table, td, tr, tbody {
 
 
 .black {
+  color: white;
   background-color: #000000;
   border: 0px solid black;
   height: 34px;
