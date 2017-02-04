@@ -5,6 +5,12 @@
 
 }
 
+.pass {
+  background-color: #3E6C85;
+  color: #FFFFFF;
+  font-size: 24px;
+}
+
 .blank {
   background: #000000;
   border: 0px;
@@ -39,10 +45,12 @@ table, td, tr, tbody {
   margin: 0px;
 }
 
-
+h3{
+  color: black;
+}
 
 .black {
-  color: white;
+  color: black;
   background-color: #000000;
   border: 0px solid black;
   height: 34px;
@@ -53,6 +61,7 @@ table, td, tr, tbody {
 }
 
 .white {
+  color: white;
   background: #FFFFFF;
   border: 0px solid black;
   border: 0;

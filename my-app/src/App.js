@@ -31,6 +31,8 @@ class Board extends Component {
   constructor() {
     super();
     this.state = {
+      blackScore: 0,
+      whiteScore: 0,
       whiteIsNext: false,
       gameBoard: new GameBoard(19),
     };
@@ -38,6 +40,12 @@ class Board extends Component {
 
   handleClick(cell){
     this.setState(gameLogic(this.state, cell))
+  }
+
+  switchTurn(state){
+    let newState = this.state
+    newState.whiteIsNext ? newState.whiteIsNext = false : newState.whiteIsNext = true;
+    this.setState(newState)
 
   }
 
@@ -46,16 +54,21 @@ class Board extends Component {
       let cells = [];
       for (let i in row) {
         cells.push(<td key={`${row[i].x}-${row[i].y}`}>
-                    <button x={row[i].x} y={row[i].y} className={row[i].value} onClick={(event) => this.handleClick(row[i])}>{row[i].x},{row[i].y}</button>
+                    <button x={row[i].x} y={row[i].y} className={row[i].value} onClick={(event) => this.handleClick(row[i])}>_</button>
                   </td>);
       }
       return <tr key={index}>{cells}</tr>;
     });
 
     return (
+      <div>
       <table className="board">
         <tbody>{rows}</tbody>
       </table>
+
+      <button onClick={(event) => this.switchTurn()} className='pass'>Pass</button>
+      <h2>White: {this.state.whiteScore}</h2><h2>Black: {this.state.blackScore}</h2>
+      </div>
     );
   }
 }
