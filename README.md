@@ -4,25 +4,25 @@
 
 Two people can play [Go](https://en.wikipedia.org/wiki/Go_%28game%29) on the same webpage.
 
-[Go](https://en.wikipedia.org/wiki/Go_%28game%29) is an existing, fixed feature set. 
+[Go](https://en.wikipedia.org/wiki/Go_%28game%29) is an existing, fixed feature set.
 
 
 ## Specifications
 ### Required
-- [ ] Two players can play on 9x9 board in the same window.
+- [ ] Two players can play on 19x19 board in the same window.
 - [ ] The board can scale to the window size
 - [ ] Front end will be built using react.
 - [ ] The artifact produced is properly licensed, preferably with the [MIT license](https://opensource.org/licenses/MIT).
 
 ### Stretch Goals
-- [ ] Players can decide between 9x9, 13x13 or 17x17 board size
+- [ ] Players can decide between 9x9, 13x13 or 19x19 board size
 - [ ] Players can decide between different UI themes
 - [ ] The game state is persisted (so reloading the page resumes where you left off)
 - [ ] Define complete set of user stories by reverse engineering [Go](https://en.wikipedia.org/wiki/Go_%28game%29)
 
 ### Quality
 - [ ] There is a clear separation of game logic code from view/rendering code.
-- [ ] A player can only place a peice on their turn, and on a valid grid space
+- [ ] A player can only place a piece on their turn, and on a valid grid space
 - [ ] The player score is displayed and updated
 - [ ] Commit messages are concise and descriptive
 - [ ] All features are added via pull requests
