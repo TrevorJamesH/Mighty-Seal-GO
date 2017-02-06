@@ -6,6 +6,11 @@ Two people can play [Go](https://en.wikipedia.org/wiki/Go_%28game%29) on the sam
 
 [Go](https://en.wikipedia.org/wiki/Go_%28game%29) is an existing, fixed feature set.
 
+Instructions for playing the game: 
+Within the my-app directory, do npm i and npm start
+Game pieces can be placed by clicking on the game board
+Players can skip turn by pressing the pass button
+
 
 ## Specifications
 ### Required
